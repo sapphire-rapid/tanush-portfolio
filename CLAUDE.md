@@ -95,7 +95,7 @@ tokens above, and note where it came from in a comment at the top of the file.
 
 ## Not built yet
 
-- Resume, email and LinkedIn links (waiting on Tanush; fill in `site.links`)
+- Resume link (waiting on Tanush; fill in `site.links.resume`)
 - Dates on the experience list (`period` in `site.ts`)
 - Real pipeline for the drowsiness project (marked TODO in `projects.ts`)
 - Project screenshots or photos, and a per-project detail page
@@ -107,3 +107,5 @@ tokens above, and note where it came from in a comment at the top of the file.
 
 - 2026-11-17: First version. Home page, projects page with filter, floating
   dock, design tokens, placeholder content from Tanush's known projects.
+- 2026-11-17: Live at https://tanush-portfolio-snowy.vercel.app. Added email
+  and LinkedIn links; both now show in the dock and the contact card.

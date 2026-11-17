@@ -12,7 +12,7 @@ import {
   type MotionValue,
 } from "motion/react";
 import { FileText, FolderKanban, House, Mail, UserRound } from "lucide-react";
-import { GithubIcon } from "./icons";
+import { GithubIcon, LinkedinIcon } from "./icons";
 import { site } from "@/data/site";
 
 type DockItem = {
@@ -28,7 +28,7 @@ const PEAK = 62;
 const REACH = 130;
 
 function buildItems(): DockItem[] {
-  const { github, email, resume } = site.links;
+  const { github, email, linkedin, resume } = site.links;
   const items: DockItem[] = [
     { label: "Home", href: "/", icon: <House />, match: "/" },
     { label: "About", href: "/#about", icon: <UserRound /> },
@@ -36,6 +36,8 @@ function buildItems(): DockItem[] {
   ];
   if (resume) items.push({ label: "Resume", href: resume, icon: <FileText />, external: true });
   if (email) items.push({ label: "Email", href: `mailto:${email}`, icon: <Mail />, external: true });
+  if (linkedin)
+    items.push({ label: "LinkedIn", href: linkedin, icon: <LinkedinIcon />, external: true });
   if (github) items.push({ label: "GitHub", href: github, icon: <GithubIcon />, external: true });
   return items;
 }
