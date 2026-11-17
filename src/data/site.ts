@@ -7,8 +7,8 @@ export const site = {
     "Portfolio of Tanush, an MTech AI student who builds machine learning that runs on microcontrollers: TinyML, computer vision and embedded systems.",
   links: {
     github: "https://github.com/sapphire-rapid",
-    email: "", // TODO: your public contact address
-    linkedin: "", // TODO
+    email: "tanushadithiya5@gmail.com",
+    linkedin: "https://www.linkedin.com/in/tanush-adithiya-g/",
     resume: "", // TODO: link to a PDF (Drive link or /resume.pdf in public/)
   },
 } as const;
