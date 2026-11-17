@@ -1,0 +1,74 @@
+@import "tailwindcss";
+@import "@fontsource-variable/bricolage-grotesque";
+@import "@fontsource-variable/geist";
+
+/*
+  Palette: a circuit board at night.
+  mask   solder-mask navy, the page
+  layer  raised surfaces (cards, dock)
+  trace  hairlines and borders
+  silk   silkscreen white, body text
+  haze   secondary text
+  pad    gold contact pads, the one accent
+  signal cool cyan, used only for "analog / raw input"
+*/
+@theme {
+  --color-mask: #0c1424;
+  --color-layer: #131e36;
+  --color-trace: #25365c;
+  --color-silk: #edf1f7;
+  --color-haze: #93a2bd;
+  --color-pad: #f0c56b;
+  --color-signal: #7fd4e3;
+
+  --font-display: "Bricolage Grotesque Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Geist Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--color-mask);
+  color: var(--color-silk);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--color-pad);
+  color: var(--color-mask);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-pad);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+@keyframes stack-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.stack-track {
+  animation: stack-scroll 38s linear infinite;
+}
+
+.stack-track:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stack-track {
+    animation: none;
+  }
+}
